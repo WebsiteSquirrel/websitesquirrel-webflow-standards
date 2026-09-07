@@ -15,7 +15,7 @@ const NAV = [
     group: "Getting Started",
     items: [
       { id: "overview", title: "Overview", href: "index.html" },
-      { id: "how-this-site-works", title: "How This Site Works", href: "README.html" },
+      { id: "how-this-site-works", title: "How This Site Works", href: "README.md" },
     ],
   },
   {
