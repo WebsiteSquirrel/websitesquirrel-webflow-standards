@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>New Project Setup Checklist · WebsiteSquirrel Docs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body data-page="project-setup-checklist">
+<script>const BASE = "../";</script>
+
+<button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-head">
+      <a class="brand" href="../index.html">🐿️ WebsiteSquirrel <span>Docs</span></a>
+    </div>
+    <div class="sidebar-search">
+      <input id="navFilter" type="text" placeholder="Filter pages…" />
+    </div>
+    <nav id="navList" class="nav-groups"></nav>
+  </aside>
+
+  <main class="content" id="content">
+    <div class="content-inner">
+      <p class="doc-kicker">Project Structure SOP</p>
+      <h1>New Project Setup Checklist</h1>
+      <p class="lede">
+        Run through this at kickoff, before content or design work begins, to seed a new
+        Webflow project on this standard.
+      </p>
+
+      <ol>
+        <li>Create the project and apply the Client-First starter/base styles (utility classes, core structure, containers, section padding sizes).</li>
+        <li>Confirm required pages exist; add optional pages from the brief and organize them into Page folders if the site has more than ~6–8 pages.</li>
+        <li>Set up CMS Collections: singular names, plain-English fields, references defined, a short collection purpose note in the hand-off doc.</li>
+        <li>Build or confirm the Style Guide page reflects the project's typography, color, and component conventions.</li>
+        <li>Set up global components (nav, footer, shared CTA) as Webflow Components/Symbols, following folder naming conventions.</li>
+        <li>Rename any uploaded placeholder assets before they're used in the design.</li>
+        <li>Confirm 404 and password-protection pages are styled and in the project.</li>
+        <li>Add this SOP and the CMS Collections summary to the project's hand-off documentation.</li>
+        <li>Bookmark the QA Checklist and Go-Live Checklist for this project so the team knows what "finished" looks like before build starts.</li>
+      </ol>
+
+      <div class="callout">
+        Related pages: <a href="naming-conventions.html">Naming Conventions</a> ·
+        <a href="required-pages.html">Required Pages</a> ·
+        <a href="qa-and-golive.html">QA &amp; Go-Live Connection</a>
+      </div>
+
+      <div class="page-footer">
+        <a id="prevLink" href="#"></a>
+        <a id="nextLink" href="#"></a>
+      </div>
+    </div>
+  </main>
+
+  <aside class="toc" id="toc">
+    <p class="toc-label">On this page</p>
+    <ul id="tocList"></ul>
+  </aside>
+</div>
+
+<script src="../assets/nav-data.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

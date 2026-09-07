@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Required Pages · WebsiteSquirrel Docs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body data-page="required-pages">
+<script>const BASE = "../";</script>
+
+<button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-head">
+      <a class="brand" href="../index.html">🐿️ WebsiteSquirrel <span>Docs</span></a>
+    </div>
+    <div class="sidebar-search">
+      <input id="navFilter" type="text" placeholder="Filter pages…" />
+    </div>
+    <nav id="navList" class="nav-groups"></nav>
+  </aside>
+
+  <main class="content" id="content">
+    <div class="content-inner">
+      <p class="doc-kicker">Project Structure SOP</p>
+      <h1>Required Pages</h1>
+      <p class="lede">
+        Every project ships with the core set below. Optional pages are added based on
+        project scope — confirm which are in scope at kickoff so QA and Go-Live can be scoped correctly.
+      </p>
+
+      <h2>Core pages — required on every project</h2>
+      <table class="doc-table">
+        <thead><tr><th>Page</th><th>Slug</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Home</td><td><code>/</code></td><td>Primary landing page</td></tr>
+          <tr><td>About / Company</td><td><code>/about-us</code></td><td>Company story, team, mission</td></tr>
+          <tr><td>Services / Products</td><td><code>/services</code> or CMS collection</td><td>Static or CMS-driven depending on scope</td></tr>
+          <tr><td>Contact</td><td><code>/contact</code></td><td>Must include a working form — verify in QA</td></tr>
+          <tr><td>404 Not Found</td><td><code>/404-not-found</code></td><td>Webflow system page — style must match brand</td></tr>
+          <tr><td>Password / 401</td><td><code>/401-password</code></td><td>Only relevant if staging password protection is used</td></tr>
+          <tr><td>Style Guide</td><td><code>/style-guide</code></td><td>Internal reference for Client-First components; unindexed, can be unpublished after hand-off</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Common optional pages</h2>
+      <p>Add per project scope — call these out explicitly in the project brief.</p>
+      <div class="card-grid">
+        <div class="card"><h4>Blog / Insights</h4><p>CMS collection + template + list page.</p></div>
+        <div class="card"><h4>Case Studies / Portfolio</h4><p>CMS collection + template + list page.</p></div>
+        <div class="card"><h4>Team</h4><p>Static or CMS-driven (Team Member collection).</p></div>
+        <div class="card"><h4>Pricing</h4><p>Static comparison or plan cards.</p></div>
+        <div class="card"><h4>Careers / Jobs</h4><p>Often a CMS collection for open roles.</p></div>
+        <div class="card"><h4>FAQ</h4><p>Standalone page, or a section reused across pages.</p></div>
+        <div class="card"><h4>Legal</h4><p>Privacy Policy, Terms of Service, Cookie Policy.</p></div>
+        <div class="card"><h4>Landing pages</h4><p>Campaign-specific; usually excluded from main nav and noindexed.</p></div>
+      </div>
+
+      <div class="callout warn">
+        <strong>Scope this at kickoff, not mid-build.</strong> The Go-Live checklist checks every page
+        listed as "in scope" in the brief — pages added late are the easiest thing for QA to miss.
+      </div>
+
+      <div class="page-footer">
+        <a id="prevLink" href="#"></a>
+        <a id="nextLink" href="#"></a>
+      </div>
+    </div>
+  </main>
+
+  <aside class="toc" id="toc">
+    <p class="toc-label">On this page</p>
+    <ul id="tocList"></ul>
+  </aside>
+</div>
+
+<script src="../assets/nav-data.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Ideas &amp; Backlog · WebsiteSquirrel Docs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body data-page="ideas-backlog">
+<script>const BASE = "../";</script>
+
+<button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-head">
+      <a class="brand" href="../index.html">🐿️ WebsiteSquirrel <span>Docs</span></a>
+    </div>
+    <div class="sidebar-search">
+      <input id="navFilter" type="text" placeholder="Filter pages…" />
+    </div>
+    <nav id="navList" class="nav-groups"></nav>
+  </aside>
+
+  <main class="content" id="content">
+    <div class="content-inner">
+      <p class="doc-kicker">Working Notes</p>
+      <h1>Ideas &amp; Backlog</h1>
+      <p class="lede">
+        A scratchpad for anything not ready to be its own page yet — half-formed thoughts, things
+        to double-check, or topics you know need documenting eventually. Not part of the published
+        standard; nobody should treat anything here as a rule until it's promoted to a real page.
+      </p>
+
+      <div class="callout">
+        <strong>How to use this page:</strong> add a dated entry under "Unsorted ideas" whenever
+        something comes to mind. When an idea is solid enough to write up properly, give it its own
+        page (see <a href="../README.html">How This Site Works</a>), link to it from
+        "Promoted" below, and delete the entry from Unsorted.
+      </div>
+
+      <h2>Unsorted ideas</h2>
+      <p><em>Newest at the top. One line is fine — expand only if it helps you remember the thought later.</em></p>
+      <ul>
+        <li><code>2026-09-07</code> — Example entry: "Document how the starter template handles multi-language sites once that's built out." Delete this line and add real ones.</li>
+      </ul>
+
+      <h2>Open questions</h2>
+      <p>Things you're not sure about yet and want to resolve before writing them up as a rule.</p>
+      <ul>
+        <li><em>No open questions yet.</em></li>
+      </ul>
+
+      <h2>Promoted</h2>
+      <p>A short log of ideas that graduated into real pages, so you can trace where something came from.</p>
+      <ul>
+        <li><em>Nothing promoted yet — this fills in as the backlog above turns into real pages.</em></li>
+      </ul>
+
+      <div class="page-footer">
+        <a id="prevLink" href="#"></a>
+        <span class="spacer"></span>
+      </div>
+    </div>
+  </main>
+
+  <aside class="toc" id="toc">
+    <p class="toc-label">On this page</p>
+    <ul id="tocList"></ul>
+  </aside>
+</div>
+
+<script src="../assets/nav-data.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

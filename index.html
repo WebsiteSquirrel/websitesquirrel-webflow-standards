@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Overview · WebsiteSquirrel Docs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Standard structure, naming conventions, and workflow for WebsiteSquirrel Webflow builds." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body data-page="overview">
+<script>const BASE = "";</script>
+
+<button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-head">
+      <a class="brand" href="index.html">🐿️ WebsiteSquirrel <span>Docs</span></a>
+    </div>
+    <div class="sidebar-search">
+      <input id="navFilter" type="text" placeholder="Filter pages…" />
+    </div>
+    <nav id="navList" class="nav-groups"></nav>
+  </aside>
+
+  <main class="content" id="content">
+    <div class="content-inner">
+      <p class="doc-kicker">Start here</p>
+      <h1>WebsiteSquirrel Webflow Docs</h1>
+      <p class="lede">
+        One standard for how we structure, name, and organize every Webflow build —
+        so any builder, QA reviewer, or client can open a project and understand it
+        without a walkthrough call.
+      </p>
+
+      <p>
+        This is a living reference, the same way
+        <a href="https://finsweet.com/client-first/docs/quick-guide" target="_blank" rel="noopener">Finsweet's Client-First docs</a>
+        are for the Client-First class system. Edit the HTML files directly to keep it current —
+        there's no build step. See the <a href="README.html">how this site works</a> page if you're adding new content.
+      </p>
+
+      <div class="callout">
+        <strong>Style system baseline:</strong> everything here builds on
+        <a href="https://finsweet.com/client-first/docs/quick-guide" target="_blank" rel="noopener">Finsweet Client-First</a>
+        for class naming, folders, and page structure. This site applies Client-First specifically to
+        WebsiteSquirrel's pages, CMS, components, and hand-off process — it doesn't repeat the full Client-First docs.
+      </div>
+
+      <h2>What's documented here</h2>
+      <div class="card-grid">
+        <a class="card" href="docs/naming-conventions.html" style="text-decoration:none;">
+          <h4>Naming Conventions</h4>
+          <p>Pages, CMS collections, components, and assets — the exact patterns to use.</p>
+        </a>
+        <a class="card" href="docs/required-pages.html" style="text-decoration:none;">
+          <h4>Required Pages</h4>
+          <p>The core page set every project ships with, plus common optional pages.</p>
+        </a>
+        <a class="card" href="docs/component-organization.html" style="text-decoration:none;">
+          <h4>Component &amp; Section Organization</h4>
+          <p>How sections are named, when to reuse a component vs. build a new one.</p>
+        </a>
+        <a class="card" href="docs/definition-of-done.html" style="text-decoration:none;">
+          <h4>Definition of Done</h4>
+          <p>What "structurally ready for QA" means before a build moves forward.</p>
+        </a>
+        <a class="card" href="docs/project-setup-checklist.html" style="text-decoration:none;">
+          <h4>New Project Setup Checklist</h4>
+          <p>Steps to seed a new Webflow project on this standard at kickoff.</p>
+        </a>
+        <a class="card" href="docs/qa-and-golive.html" style="text-decoration:none;">
+          <h4>QA &amp; Go-Live Connection</h4>
+          <p>How this structure standard hands off into QA and launch workflows.</p>
+        </a>
+        <a class="card" href="starter-template/overview.html" style="text-decoration:none;">
+          <h4>Starter Template</h4>
+          <p>Docs for the WebsiteSquirrel Webflow starter template — fill in as it's built.</p>
+        </a>
+      </div>
+
+      <h2>Who this is for</h2>
+      <ul>
+        <li><strong>Builders</strong> — the naming and structure rules to follow while working in Webflow Designer.</li>
+        <li><strong>QA reviewers</strong> — the standard a build is checked against before it moves to launch.</li>
+        <li><strong>New team members and clients</strong> — a way to understand any project without a hand-off call.</li>
+      </ul>
+
+      <div class="page-footer">
+        <span></span>
+        <a id="nextLink" href="#"></a>
+      </div>
+    </div>
+  </main>
+
+  <aside class="toc" id="toc">
+    <p class="toc-label">On this page</p>
+    <ul id="tocList"></ul>
+  </aside>
+</div>
+
+<script src="assets/nav-data.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>

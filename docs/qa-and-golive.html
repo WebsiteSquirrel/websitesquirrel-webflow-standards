@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>QA &amp; Go-Live Connection · WebsiteSquirrel Docs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body data-page="qa-and-golive">
+<script>const BASE = "../";</script>
+
+<button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-head">
+      <a class="brand" href="../index.html">🐿️ WebsiteSquirrel <span>Docs</span></a>
+    </div>
+    <div class="sidebar-search">
+      <input id="navFilter" type="text" placeholder="Filter pages…" />
+    </div>
+    <nav id="navList" class="nav-groups"></nav>
+  </aside>
+
+  <main class="content" id="content">
+    <div class="content-inner">
+      <p class="doc-kicker">Project Structure SOP</p>
+      <h1>QA &amp; Go-Live Connection</h1>
+      <p class="lede">
+        This SOP defines the structure a project should have. Two downstream workflows verify
+        and ship that structure.
+      </p>
+
+      <table class="doc-table">
+        <thead><tr><th>Workflow</th><th>What it checks</th><th>When to run it</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>QA Checklist</td>
+            <td>Functional and structural correctness against this SOP: pages, naming, CMS, responsiveness, forms, links, accessibility, performance</td>
+            <td>After a build is "structurally done" (see <a href="definition-of-done.html">Definition of Done</a>), before client review</td>
+          </tr>
+          <tr>
+            <td>Go-Live Checklist</td>
+            <td>Launch readiness: domain/DNS, redirects, SEO settings, analytics, integrations, backups, final client sign-off</td>
+            <td>After QA has passed and the client has approved</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout warn">
+        <strong>Add your links here:</strong> paste the live URLs to the WebsiteSquirrel QA Checklist
+        and Go-Live Checklist below once finalized. Keeping them in one spot means future updates to
+        either checklist don't require touching this SOP.
+        <ul style="margin-top:0.6rem;">
+          <li>QA Checklist: <code>[ add link ]</code></li>
+          <li>Go-Live Checklist: <code>[ add link ]</code></li>
+        </ul>
+      </div>
+
+      <p>
+        Together, these three documents form the project lifecycle:
+        this SOP (how it's built) → QA Checklist (is it built correctly) → Go-Live Checklist (is it safe to launch).
+      </p>
+
+      <div class="page-footer">
+        <a id="prevLink" href="#"></a>
+        <a id="nextLink" href="#"></a>
+      </div>
+    </div>
+  </main>
+
+  <aside class="toc" id="toc">
+    <p class="toc-label">On this page</p>
+    <ul id="tocList"></ul>
+  </aside>
+</div>
+
+<script src="../assets/nav-data.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

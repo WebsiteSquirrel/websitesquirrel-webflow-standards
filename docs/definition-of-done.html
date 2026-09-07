@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Definition of Done · WebsiteSquirrel Docs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body data-page="definition-of-done">
+<script>const BASE = "../";</script>
+
+<button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-head">
+      <a class="brand" href="../index.html">🐿️ WebsiteSquirrel <span>Docs</span></a>
+    </div>
+    <div class="sidebar-search">
+      <input id="navFilter" type="text" placeholder="Filter pages…" />
+    </div>
+    <nav id="navList" class="nav-groups"></nav>
+  </aside>
+
+  <main class="content" id="content">
+    <div class="content-inner">
+      <p class="doc-kicker">Project Structure SOP</p>
+      <h1>Definition of Done</h1>
+      <p class="lede">
+        A lightweight bar for "structurally done" — ready to move into formal QA. The exhaustive
+        checks live in the QA and Go-Live checklists.
+      </p>
+
+      <h2>A build is structurally done when…</h2>
+      <ul>
+        <li>All required pages exist, and all in-scope optional pages from the brief exist. See <a href="required-pages.html">Required Pages</a>.</li>
+        <li>Every page follows the Client-First core structure — no ad hoc div structures. See <a href="naming-conventions.html">Naming Conventions</a>.</li>
+        <li>All components/sections follow the folder and naming conventions — no unnamed Div Block classes, no leftover Webflow default names.</li>
+        <li>CMS collections match the naming and field conventions, and a CMS Collections summary exists in the hand-off notes.</li>
+        <li>All images/assets are renamed and optimized for size.</li>
+        <li>The Style Guide page reflects the components actually used in the build.</li>
+        <li>No orphaned pages, unused symbols, or leftover placeholder sections remain in the project.</li>
+        <li>The project is ready to be handed to QA, and once QA passes, to Go-Live. See <a href="qa-and-golive.html">QA &amp; Go-Live Connection</a>.</li>
+      </ul>
+
+      <div class="callout warn">
+        <strong>Not a substitute:</strong> "done" here means structurally ready for review — it does
+        not mean QA has passed or Go-Live is complete. Don't skip either checklist because this list
+        is satisfied.
+      </div>
+
+      <div class="page-footer">
+        <a id="prevLink" href="#"></a>
+        <a id="nextLink" href="#"></a>
+      </div>
+    </div>
+  </main>
+
+  <aside class="toc" id="toc">
+    <p class="toc-label">On this page</p>
+    <ul id="tocList"></ul>
+  </aside>
+</div>
+
+<script src="../assets/nav-data.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Naming Conventions · WebsiteSquirrel Docs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body data-page="naming-conventions">
+<script>const BASE = "../";</script>
+
+<button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-head">
+      <a class="brand" href="../index.html">🐿️ WebsiteSquirrel <span>Docs</span></a>
+    </div>
+    <div class="sidebar-search">
+      <input id="navFilter" type="text" placeholder="Filter pages…" />
+    </div>
+    <nav id="navList" class="nav-groups"></nav>
+  </aside>
+
+  <main class="content" id="content">
+    <div class="content-inner">
+      <p class="doc-kicker">Project Structure SOP</p>
+      <h1>Folder &amp; Naming Conventions</h1>
+      <p class="lede">
+        Client-First gives us the naming grammar. This page defines how WebsiteSquirrel
+        applies it to pages, CMS collections, components, and assets so every project looks the same.
+      </p>
+
+      <div class="callout">
+        <strong>Reference:</strong> full rationale for the class system lives at
+        <a href="https://finsweet.com/client-first/docs/classes-strategy-1" target="_blank" rel="noopener">Client-First — Classes strategy</a>
+        and
+        <a href="https://finsweet.com/client-first/docs/folders-strategy" target="_blank" rel="noopener">Client-First — Folders strategy</a>.
+        This page is the condensed, WebsiteSquirrel-specific version.
+      </div>
+
+      <h2>General naming rules</h2>
+      <p>Apply these everywhere — pages, collections, components, assets.</p>
+      <ul>
+        <li>All lowercase, words separated by hyphens: <code>home</code>, <code>about-us</code>, <code>case-study</code>.</li>
+        <li>No abbreviations or shorthand unless it's an industry-standard term (<code>faq</code>, <code>cta</code>). A new dev, a QA tester, or the client should understand the name with zero context.</li>
+        <li>Underscore (<code>_</code>) is reserved for Client-First folder syntax: <code>folder-name_element-name</code> (e.g. <code>testimonial-slider_arrow</code>). Never use it as a generic word separator.</li>
+        <li>Combo/variant classes always use the <code>is-</code> prefix: <code>is-active</code>, <code>is-dark</code>, <code>is-mobile-only</code>.</li>
+        <li>Name by function, not by visual position or one-off content: <code>pricing-cards</code>, not <code>three-boxes-with-price</code>; <code>team-list_headshot</code>, not <code>round-image</code>.</li>
+      </ul>
+
+      <h2>Pages</h2>
+      <p>
+        Page names in the Webflow Pages panel and their slugs follow the same lowercase-hyphenated
+        pattern. Use folders inside the Pages panel to group families of pages once a site has more
+        than a handful.
+      </p>
+      <table class="doc-table">
+        <thead><tr><th>What</th><th>Convention</th><th>Example</th></tr></thead>
+        <tbody>
+          <tr><td>Static page name / slug</td><td>lowercase-hyphenated, matches URL</td><td><code>/about-us</code>, <code>/case-studies</code></td></tr>
+          <tr><td>CMS template page slug</td><td>singular collection name as the folder, dynamic slug field drives the URL</td><td><code>/blog/{slug}</code>, <code>/case-study/{slug}</code></td></tr>
+          <tr><td>Utility / system pages</td><td>prefixed so they sort together and read as non-production</td><td><code>401-password</code>, <code>404-not-found</code>, <code>style-guide</code></td></tr>
+          <tr><td>Page folders (Pages panel)</td><td>group by section of the site once &gt; 6–8 pages exist</td><td><code>Company/</code>, <code>Resources/</code>, <code>Legal/</code></td></tr>
+        </tbody>
+      </table>
+      <div class="callout">
+        <strong>Keep it aligned:</strong> the Webflow page name and slug should match (page name "Case Studies" → slug <code>case-studies</code>). If they diverge, note the slug in the page's Notes so QA can find it fast.
+      </div>
+
+      <h2>CMS Collections</h2>
+      <p>
+        Collections are named as singular nouns (Webflow pluralizes them for Collection Lists
+        automatically). Field names follow the same clarity-first rule as classes — describe what
+        the field holds, not its type.
+      </p>
+      <table class="doc-table">
+        <thead><tr><th>What</th><th>Convention</th><th>Example</th></tr></thead>
+        <tbody>
+          <tr><td>Collection name</td><td>Singular, Title Case in the Designer</td><td>Blog Post, Team Member, Case Study, Service</td></tr>
+          <tr><td>Collection slug</td><td>auto-generated plural-hyphenated; verify it reads cleanly</td><td><code>blog-posts</code>, <code>team-members</code>, <code>case-studies</code></td></tr>
+          <tr><td>Field names</td><td>plain English, no type suffixes (no "nameText")</td><td>Featured Image, Publish Date, Excerpt, Author</td></tr>
+          <tr><td>Reference fields</td><td>name after the related collection; singular for Reference, plural for Multi-reference</td><td>Author (Reference → Team Member), Related Posts (Multi-ref → Blog Post)</td></tr>
+          <tr><td>Option fields</td><td>option values in Title Case, short and finite</td><td>Status: Draft / In Review / Published</td></tr>
+        </tbody>
+      </table>
+      <ul>
+        <li>One collection = one clearly defined content type. If two collections are only ever used together, consider whether one should be a field on the other instead.</li>
+        <li>Keep a short CMS Collections list in the project's hand-off notes: collection name, purpose, and which pages consume it.</li>
+      </ul>
+
+      <h2>Components &amp; sections</h2>
+      <p>
+        We follow Client-First's Core Structure and Folders systems exactly. Every page uses the
+        same six-layer skeleton, and every reusable group of elements sits inside a named folder so
+        it's identifiable in the Navigator.
+      </p>
+
+      <h3>Core structure — every page</h3>
+      <table class="doc-table">
+        <thead><tr><th>Layer</th><th>Class</th><th>Purpose</th></tr></thead>
+        <tbody>
+          <tr><td>1. Page wrapper</td><td><code>page-wrapper</code></td><td>Outermost div; wraps everything on the page</td></tr>
+          <tr><td>2. Main wrapper</td><td><code>main-wrapper</code></td><td><code>&lt;main&gt;</code> tag; wraps all content sections, excludes nav/footer</td></tr>
+          <tr><td>3. Section</td><td><code>section_[identifier]</code></td><td>One <code>&lt;section&gt;</code> per content block, named for the Navigator (e.g. <code>section_hero</code>)</td></tr>
+          <tr><td>4. Global padding</td><td><code>padding-global</code></td><td>Controls left/right page padding only</td></tr>
+          <tr><td>5. Container</td><td><code>container-[size]</code></td><td>Centers content, sets max-width (small / medium / large)</td></tr>
+          <tr><td>6. Section padding</td><td><code>padding-section-[size]</code></td><td>Controls top/bottom section spacing (small / medium / large)</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Folder &amp; component naming</h3>
+      <ul>
+        <li>Reusable, project-wide component → keyword-based folder, no page name: <code>slider_arrow</code>, <code>pricing-card_price</code>.</li>
+        <li>Add a <code>_component</code> suffix on the outer wrapper only when the folder is a complete, copy-pasteable UI block: <code>pricing-card_component</code>, <code>newsletter-signup_component</code>.</li>
+        <li>One-off, page-specific block → page name as the folder: <code>about-hero_image</code>, <code>careers-cta_button</code>. Rule: if it's page-named, it stays on that page only.</li>
+        <li>Small variation of an existing global component on one page → keep the component's folder, add the context as the first keyword: <code>slider_testimonials-arrow</code> (not a new folder).</li>
+        <li>Use a combo class (<code>is-</code>) instead of a new folder whenever the change is a simple style variant: <code>card is-featured</code>, <code>section_cta is-dark</code>.</li>
+        <li>Name sections descriptively so the Navigator reads like a sitemap: <code>section_hero</code>, <code>section_logos</code>, <code>section_how-it-works</code>, <code>section_testimonials</code>, <code>section_pricing</code>, <code>section_faq</code>, <code>section_cta</code>.</li>
+      </ul>
+
+      <h2>Assets</h2>
+      <p>Asset file names should survive being downloaded, re-uploaded, or handed to another tool without losing meaning.</p>
+      <table class="doc-table">
+        <thead><tr><th>Asset type</th><th>Convention</th><th>Example</th></tr></thead>
+        <tbody>
+          <tr><td>Images</td><td>lowercase-hyphenated, descriptive, no camera/export IDs</td><td><code>hero-team-office.jpg</code>, <code>icon-check-circle.svg</code></td></tr>
+          <tr><td>Logos</td><td>brand + variant</td><td><code>logo-acme-full-color.svg</code>, <code>logo-acme-white.svg</code></td></tr>
+          <tr><td>Icons</td><td><code>icon-</code> prefix + concept</td><td><code>icon-arrow-right.svg</code>, <code>icon-chevron-down.svg</code></td></tr>
+          <tr><td>Documents</td><td>purpose + version/date if it will be replaced</td><td><code>case-study-acme-2026.pdf</code>, <code>price-list-2026-q1.pdf</code></td></tr>
+          <tr><td>Webflow Asset folders</td><td>group by type or by page/section once the library grows</td><td><code>Icons/</code>, <code>Logos/</code>, <code>Blog/</code>, <code>Team/</code></td></tr>
+        </tbody>
+      </table>
+      <div class="callout warn">
+        <strong>Don't skip this:</strong> never rely on Webflow's auto-generated upload names (<code>image-1234.png</code>). Rename before or immediately after upload, and compress/size images correctly — see the Go-Live checklist's performance checks.
+      </div>
+
+      <div class="page-footer">
+        <a id="prevLink" href="#"></a>
+        <a id="nextLink" href="#"></a>
+      </div>
+    </div>
+  </main>
+
+  <aside class="toc" id="toc">
+    <p class="toc-label">On this page</p>
+    <ul id="tocList"></ul>
+  </aside>
+</div>
+
+<script src="../assets/nav-data.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

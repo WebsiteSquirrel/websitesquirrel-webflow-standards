@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Starter Template · WebsiteSquirrel Docs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/style.css" />
+</head>
+<body data-page="starter-template-overview">
+<script>const BASE = "../";</script>
+
+<button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-head">
+      <a class="brand" href="../index.html">🐿️ WebsiteSquirrel <span>Docs</span></a>
+    </div>
+    <div class="sidebar-search">
+      <input id="navFilter" type="text" placeholder="Filter pages…" />
+    </div>
+    <nav id="navList" class="nav-groups"></nav>
+  </aside>
+
+  <main class="content" id="content">
+    <div class="content-inner">
+      <p class="doc-kicker">Starter Template</p>
+      <h1>Starter Template Docs</h1>
+      <p class="lede">
+        This section will document the WebsiteSquirrel Webflow starter template once it's built:
+        what's pre-built, how to clone it into a new project, and what to customize per client.
+      </p>
+
+      <span class="tag status-planned">Status: Planned</span>
+
+      <div class="callout">
+        <strong>How to fill this in:</strong> replace the sections below with real content as the
+        template comes together. Everything else on this site (sidebar, TOC, prev/next links) will
+        keep working — you're only editing content inside <code>&lt;main class="content"&gt;</code>.
+      </div>
+
+      <h2>Suggested sections to write</h2>
+      <ul>
+        <li><strong>What's included</strong> — pages, symbols, CMS collections, and interactions that ship with the template out of the box.</li>
+        <li><strong>Cloning the template</strong> — the exact steps to duplicate it into a new client project (Webflow clone link, workspace, plan considerations).</li>
+        <li><strong>What to customize first</strong> — color/typography variables, logo, nav links, footer, and any placeholder CMS content to swap out.</li>
+        <li><strong>What not to touch</strong> — core structure, global symbols, or interactions that should stay as-is across projects.</li>
+        <li><strong>Version history</strong> — a running log of what changed between template versions, so older client projects can be diffed against the latest.</li>
+      </ul>
+
+      <h2>Adding more Starter Template pages</h2>
+      <p>
+        This page is one entry in the <strong>Starter Template</strong> nav group. To add another —
+        for example a page dedicated to the template's CMS setup, or its symbol library:
+      </p>
+      <ol>
+        <li>Duplicate this file inside <code>/starter-template/</code> and rename it, e.g. <code>cms-setup.html</code>.</li>
+        <li>Update its <code>&lt;title&gt;</code>, <code>&lt;body data-page="..."&gt;</code> id, and heading.</li>
+        <li>Add a matching entry to the <code>Starter Template</code> group in <code>/assets/nav-data.js</code>.</li>
+      </ol>
+      <p>The sidebar, active-state highlighting, and Previous/Next footer links update automatically from that one file — see <a href="../README.html">how this site works</a> for the full pattern.</p>
+
+      <div class="page-footer">
+        <a id="prevLink" href="#"></a>
+        <span class="spacer"></span>
+      </div>
+    </div>
+  </main>
+
+  <aside class="toc" id="toc">
+    <p class="toc-label">On this page</p>
+    <ul id="tocList"></ul>
+  </aside>
+</div>
+
+<script src="../assets/nav-data.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>
