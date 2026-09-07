@@ -144,6 +144,7 @@ input:focus-visible {
 .content {
   padding: 3rem 3rem 6rem;
   max-width: calc(var(--content-max) + 6rem);
+  margin: 0 auto;
 }
 
 .content > .content-inner { max-width: var(--content-max); }
